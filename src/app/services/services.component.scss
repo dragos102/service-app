@@ -1,0 +1,40 @@
+@keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.7;
+    }
+  }
+.pulse {
+    animation: pulse 2s infinite;
+  }
+  .pulse-button {
+    animation: pulse 2s infinite;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px; /* Full rounded corners */
+    box-shadow: 0 4px 14px 0 rgba(0, 118, 255, 0.39);
+    transition: background 0.3s, transform 0.3s;
+  }
+  .pulse-button:hover {
+    background: linear-gradient(90deg, #0056b3, #007bff);
+    transform: scale(1.05);
+  }
+
+  .hero-section {
+    background-image: url('../../assets/fundale/bmw-seria3-nou.jpg'); /* Path to your background image */
+    background-size: cover; /* Ensure the image covers the entire div */
+    background-position: center; /* Center the image */
+    height: 50vh; /* 50% of the viewport height */
+    width: 100%; /* Full width */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+  }
+  

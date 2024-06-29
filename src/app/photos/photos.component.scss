@@ -1,0 +1,82 @@
+.hero-section {
+    background-image: url('../../assets/fundale/bmw-seria2_nou.jpg'); /* Path to your background image */
+    background-size: cover; /* Ensure the image covers the entire div */
+    background-position: center; /* Center the image */
+    height: 50vh; /* 50% of the viewport height */
+    width: 100%; /* Full width */
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    font-size: 2.5rem; /* 4xl size */
+  }
+  
+  h2 {
+    font-size: 1.875rem; /* 2xl size */
+    color: #FFA500; /* Orange color */
+  }
+  
+  p {
+    font-size: 1.125rem; /* lg size */
+  }
+  
+  
+
+  .text-center {
+    height: 100%;
+  }
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.7;
+    }
+  }
+  .pulse {
+    animation: pulse 2s infinite;
+  }
+  
+  .glass-effect {
+    position: relative;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  .glass-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1));
+    transform: translateX(-50%) rotate(25deg);
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  .glass-effect:hover::before {
+    opacity: 1;
+  }
+  .pulse-button {
+    animation: pulse 2s infinite;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px; /* Full rounded corners */
+    box-shadow: 0 4px 14px 0 rgba(0, 118, 255, 0.39);
+    transition: background 0.3s, transform 0.3s;
+  }
+  .pulse-button:hover {
+    background: linear-gradient(90deg, #0056b3, #007bff);
+    transform: scale(1.05);
+  }
